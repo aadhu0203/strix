@@ -26,7 +26,7 @@
             
         </nav>
             <div class="header-text"> 
-                <h1>Hi I'm <span>Adarsh Pradeep</span></h1>
+                <h1>Hi I'm <span id="type"></span></h1>
                        <p>A BTech computer science and Engineering 3rd yr student <br>passionate about programming and design.</p>
             </div>
         </div>
@@ -222,6 +222,19 @@
     parallaxElement.style.top = scrollTop * -0.1 + "px";
   });
 </script>
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+   
+<script>
+    var typed = new Typed('#type', {
+      strings: ['<i>Adarsh</i> Pradeep', ],
+      loop:true,
+    typeSpeed:100,
+    backSpeed:80,
+    backDelay:1500
+    });
+  </script>
+
+
 </body>
 </html>
 
