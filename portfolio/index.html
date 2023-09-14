@@ -20,9 +20,12 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">contact</a></li>
-                <i class="fa-solid fa-circle-xmark" onclick="close()"></i>
+                <i class="fa-solid fa-circle-xmark" onclick="closeMenu()"></i>
             </ul>
-            <i class="fa-solid fa-bars" onclick="open()"></i>
+           
+<i class="fa-solid fa-bars" onclick="openMenu()"></i>
+
+            
             
         </nav>
             <div class="header-text"> 
@@ -191,15 +194,17 @@
         }
 
     </script>
-    <script>
-        var menuu= document.getElementById("menu");
-        function open(){
-            menuu.style.right="0"
-        }
-        function close(){
-            menuu.style.right="-200"
-        }
-    </script>
+  <script>
+    var menuu = document.getElementById("menu");
+    function openMenu() {
+        menuu.style.right = "0";
+    }
+
+    function closeMenu() {
+        menuu.style.right = "-200px";
+    }
+</script>
+
 <script>
     const scriptURL = 'https://script.google.com/macros/s/AKfycbxS_aPDtJvNdeKCnf0XdWoqIBE-mUlQ8Av_FeZXG6PWV2mPF_OpeeBFPlLQJ_O8CPgA/exec'
     const form = document.forms['submit-to-google-sheet']
