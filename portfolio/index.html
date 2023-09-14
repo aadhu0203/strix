@@ -26,7 +26,7 @@
             
         </nav>
             <div class="header-text"> 
-                <h1>Hi I'm <span class="tex"></span></h1>
+                <h1>Hi I'm <span id="tex"></span></h1>
                        <p>A BTech computer science and Engineering 3rd yr student <br>passionate about programming and design.</p>
             </div>
         </div>
@@ -224,14 +224,13 @@
 </script>
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 <script>
-var typingeffect= new Typed(".tex",
-{
-    String:["Adarsh Pradeep"],
+var typed= new Typed('#tex',{
+    Strings:['Adarsh Pradeep'],
     loop:true,
-    typespeed:100,
-    backspeed:80,
+    typeSpeed:100,
+    backSpeed:80,
     backDelay:1500
-})
+});
 </script>
 </body>
 </html>
