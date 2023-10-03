@@ -57,6 +57,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Learning App SignUp/Login </title>
     <link rel="stylesheet" href="style.css">
+    <!-- Include Font Awesome for eye icon -->
+    <link rel="stylesheet" href="font/css/all.css">
+   
 </head>
 
 <body>
@@ -82,8 +85,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <label for="">Username</label>
                 </div>
                 <div class="input-group">
-                    <input type="password" name="pass" required>
+                    <input type="password" name="pass" id="signup_password" required>
                     <label for="">Password</label>
+                    <i class="fas fa-eye" id="showPasswordToggle"></i>
                 </div>
                 <button type="submit" name="signup" class="btn">Sign Up</button>
                 <div class="sign-link">
@@ -100,9 +104,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <label for="">Username</label>
                 </div>
                 <div class="input-group">
-                    <input type="password" name="signin_pass" required>
+                    <input type="password" name="signin_pass" id="signin_password" required>
                     <label for="">Password</label>
-                    
+                    <i class="fas fa-eye" id="showSignInPasswordToggle"></i>
                 </div>
                 <div class="forgot-pass">
                     <a href="#">Forgot Password?</a>
@@ -114,8 +118,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             </form>
         </div>
     </div>
-
     <script src="script.js"></script>
+
+    <script>
+    // JavaScript to toggle password visibility for sign-up
+    document.getElementById('showPasswordToggle').addEventListener('click', function() {
+        var passwordInput = document.getElementById('signup_password');
+        
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            this.classList.remove('fa-eye');
+            this.classList.add('fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            this.classList.remove('fa-eye-slash');
+            this.classList.add('fa-eye');
+        }
+    });
+
+    // JavaScript to toggle password visibility for sign-in
+    document.getElementById('showSignInPasswordToggle').addEventListener('click', function() {
+        var passwordInput = document.getElementById('signin_password');
+        
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            this.classList.remove('fa-eye');
+            this.classList.add('fa-eye-slash');
+        } else {
+            passwordInput.type = 'password';
+            this.classList.remove('fa-eye-slash');
+            this.classList.add('fa-eye');
+        }
+    });
+    </script>
 </body>
 
 </html>
